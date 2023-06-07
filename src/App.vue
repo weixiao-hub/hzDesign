@@ -1,18 +1,31 @@
 <template>
- <header class="header">
+  <header class="header">
     <div class="logo">
-      <i-virgo theme="outline" size="37" fill="red" class="icon"/>
+      <i-virgo
+        theme="outline"
+        size="37"
+        fill="red"
+        class="icon"
+      />
       <span>hz-design</span>
     </div>
     <div class="navbar">
-      <router-link to="/">设计</router-link>
-      <router-link to="/">开发</router-link>
-      <router-link :to="{name:'modules'}">组件</router-link>
-      <router-link to="/"></router-link>
-      <router-link to="/"></router-link>
+      <router-link to="/">
+        设计
+      </router-link>
+      <router-link to="/">
+        开发
+      </router-link>
+      <router-link :to="{name:'modules'}">
+        组件
+      </router-link>
+      <router-link to="/">
+        笔记
+      </router-link>
+      <router-link to="/" />
     </div>
   </header>
-  <router-view/>
+  <router-view />
 </template>
 
 <style lang="less">

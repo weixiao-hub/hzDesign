@@ -1,22 +1,35 @@
 <script setup lang='ts'>
 import { defineComponent } from 'vue'
 defineComponent({
-  name: 'hzModules'
+  name: 'HzModules'
 })
 </script>
 <template>
   <div class="modules">
     <div class="component-bar">
-      <div class="bar-item-title">通用</div>
-      <router-link to="/modules/button" class="bar-item">按钮</router-link>
-      <div class="bar-item-title">导航</div>
-      <router-link to="/modules/dropdown" class="bar-item">Dropdown下拉菜单</router-link>
+      <div class="bar-item-title">
+        通用
+      </div>
+      <router-link
+        to="/modules/button"
+        class="bar-item"
+      >
+        按钮
+      </router-link>
+      <div class="bar-item-title">
+        导航
+      </div>
+      <router-link
+        to="/modules/dropdown"
+        class="bar-item"
+      >
+        Dropdown 下拉菜单
+      </router-link>
     </div>
     <div class="main">
-      <router-view></router-view>
+      <router-view />
     </div>
   </div>
-
 </template>
 <style scoped lang="less">
 
