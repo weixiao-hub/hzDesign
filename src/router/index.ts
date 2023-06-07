@@ -12,6 +12,22 @@ const routes: Array<RouteRecordRaw> = [
   {
     path: '/home',
     component: () => import(/* webpackChunkName: "about" */ '../views/Home.vue')
+  },
+  {
+    path: '/modules',
+    name: 'modules',
+    component: () => import('../views/Modules.vue'),
+    redirect: '/modules/button',
+    children: [
+      {
+        path: 'button',
+        component: () => import('../views/Button.vue')
+      },
+      {
+        path: 'dropdown',
+        component: () => import('../views/Dropdown.vue')
+      }
+    ]
   }
 ]
 
