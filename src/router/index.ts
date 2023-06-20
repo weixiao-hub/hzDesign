@@ -35,5 +35,14 @@ const router = createRouter({
   history: createWebHashHistory(),
   routes
 })
+namespace Test1 {
+  export namespace Test2 {
+    export let a = 1
+  }
+
+  console.log(Test2.a)
+}
+
+console.log(Test1.Test2.a)
 
 export default router

@@ -58,7 +58,7 @@ defineComponent({
     }
 }
 .main {
-  padding: 4rem;
+  padding: 2rem 4rem;
   flex: 1;
 }
   }

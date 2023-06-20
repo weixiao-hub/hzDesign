@@ -7,7 +7,7 @@ defineComponent({
 <template>
   <div>
     <div class="top-title">
-      <p class="hz-title">
+      <p class="hz-title xl">
         Dropdown 下拉菜单
       </p>
       <p>页面上的命令过多时，可将备选命令收纳到向下展开的浮层容器中。通常用于菜单下拉。</p>
@@ -26,7 +26,5 @@ defineComponent({
   </div>
 </template>
 <style scoped lang="less">
-  .top-title {
-    padding-bottom: 1rem;
-  }
+
 </style>

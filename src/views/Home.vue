@@ -1,17 +1,12 @@
 <template>
-  <div id="Home">
-
-  </div>
+  <div id="Home" />
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue'
 
 export default defineComponent({
-  name: 'hzHome',
-  props: {
-    msg: String
-  }
+  name: 'HzHome',
 })
 </script>
 

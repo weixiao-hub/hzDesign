@@ -36,8 +36,8 @@
       justify-content: space-between;
       align-items: center;
       height: 68px;
-      border-bottom: 1px solid #eee;
-      box-shadow: 0 0 5px #eee;
+      border-bottom: 1px solid #cce;
+      box-shadow: 0 4px 4px #eee;
       .icon {
         display: flex;
         align-items: center;

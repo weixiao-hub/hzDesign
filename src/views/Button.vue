@@ -3,36 +3,41 @@ import { defineComponent } from 'vue'
 defineComponent({
   name: 'HzButton'
 })
+let code:string = `<Button>主要按钮</Button>
+    <Button type="sceondary">次要按钮</Button> 
+    <Button type="outline">线框按钮</Button>`
 </script>
 <template>
   <div>
-    <HzButton
-      :loading="true"
-      shape="circle"
-    >
-      主要按钮
-    </HzButton>
-    <HzButton
-      shape="circle"
-      type="secondary"
-      size="l"
-    >
-      次要按钮
-    </HzButton>
-    <HzButton
-      shape="circle"
-      type="outline"
-      size="s"
-    >
-      线框按钮
-    </HzButton>
-    <HzButton
-      shape="circle"
-      type="outline"
-      size="m"
-    >
-      线框按钮
-    </HzButton>
+    <div class="top-title">
+      <p class="hz-title xl">
+        Button 按钮
+      </p>
+    </div>
+    <div class="case-card">
+      <p class="hz-title">
+        按钮类型 type
+      </p>
+      <p>按钮有三种类型：主按钮、次按钮、线框按钮。主按钮在同一个操作区域建议最多出现一次。</p>
+      <div class="container">
+        <HzButton>
+          主要按钮
+        </HzButton>
+        <HzButton
+          type="secondary"
+        >
+          次要按钮
+        </HzButton>
+        <HzButton
+          type="outline"
+        >
+          线框按钮
+        </HzButton>
+      </div>
+      <div class="code-container">
+        <hzCode :value="code" />
+      </div>
+    </div>
   </div>
 </template>
 <style scoped>

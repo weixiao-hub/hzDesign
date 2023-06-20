@@ -7,7 +7,8 @@ export {}
 
 declare module 'vue' {
   export interface GlobalComponents {
-    HzButton: typeof import('./src/components/dropdown/hzButton.vue')['default']
+    HzButton: typeof import('./src/components/hzbutton/hzButton.vue')['default']
+    HzCode: typeof import('./src/components/code/hzCode.vue')['default']
     HzDropdown: typeof import('./src/components/dropdown/hzDropdown.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
