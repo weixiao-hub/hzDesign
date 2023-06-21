@@ -63,7 +63,6 @@ if(props.type == 'secondary' || props.type == 'outline' ) {
 }
 
 hzShape.value = btShape(props.shape)
-console.log(hzShape.value);
 
 </script>
 <template>

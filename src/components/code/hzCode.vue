@@ -3,16 +3,16 @@
     <i-code
       theme="outline"
       size="14"
-      fill="#333"
       class="icon"
-      @click="show = (!show)"
+      :class="{'active':show }"
+      @click="show = !show"
     />
     <i-copy
       v-if="show"
       theme="outline"
       size="14"
-      fill="#333"
       class="icon"
+      @click="copyCode(value,popup('复制成功'))"
     />
   </div>
   <pre v-if="show">
@@ -27,7 +27,7 @@
 
 <script lang="ts" setup>
 import { ref,Ref } from 'vue';
-
+import {copyCode,popup} from '@/utils'
   let show:Ref<boolean> = ref(false)
   const props = defineProps({
     fontColor:{
@@ -39,12 +39,9 @@ import { ref,Ref } from 'vue';
       default:''
     }
   })
-  function splitValue(str:string) {
-    console.log(str.split(' '));
-    
-  }
 
-  splitValue(props.value)
+
+
 
 </script>
 <style lang="less">
@@ -60,7 +57,16 @@ import { ref,Ref } from 'vue';
       cursor: pointer;
       background-color: #c4c5c9;
       border-radius: 0.3rem;
+      &:active {
+        background-color: #232425;
+        color:red
+      }
     }
+    .icon.active {
+      background-color: #232425;
+      color:red
+    }
+    
   }
   .hz-code {
     white-space: pre-wrap;
