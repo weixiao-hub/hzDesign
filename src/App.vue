@@ -19,10 +19,12 @@
       <router-link :to="{name:'modules'}">
         组件
       </router-link>
-      <router-link to="/">
+      <router-link to="/note">
         笔记
       </router-link>
-      <router-link to="/" />
+      <router-link to="/cases">
+        案例
+      </router-link>
     </div>
   </header>
   <router-view />

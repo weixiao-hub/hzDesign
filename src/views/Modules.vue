@@ -1,5 +1,26 @@
 <script setup lang='ts'>
 import { defineComponent } from 'vue'
+import {menu} from '@/components/sidebar/index'
+const barData:menu[] = [
+  {
+    title: '通用',
+    menu: [
+      {
+        title: '按钮',
+        path: '/modules/button'
+      }
+    ]
+  },
+  {
+    title: '导航',
+    menu: [
+      {
+        title: 'Dropdown',
+        path: '/modules/dropdown'
+      }
+    ]
+  },
+]
 defineComponent({
   name: 'HzModules'
 })
@@ -7,7 +28,7 @@ defineComponent({
 <template>
   <div class="modules">
     <div class="component-bar">
-      <div class="bar-item-title">
+      <!-- <div class="bar-item-title">
         通用
       </div>
       <router-link
@@ -24,7 +45,8 @@ defineComponent({
         class="bar-item"
       >
         Dropdown 下拉菜单
-      </router-link>
+      </router-link> -->
+      <sideBar :data="barData" />
     </div>
     <div class="main">
       <router-view />
@@ -41,21 +63,6 @@ defineComponent({
       border-right: solid 1px #eee;
       height: 100%;
       overflow:hidden;
-    .bar-item-title {
-      font-weight: 600;
-      padding: 0.5rem 0.5rem;
-    }
-    .bar-item {
-      transition: all 0.5s;
-      display: flex;
-      padding: 0.5rem 0.5rem;
-      margin-left: 1rem;
-
-    }
-    .bar-item.router-link-active {
-      background-color: #e7f1ff;
-      border-radius: 0.5rem;
-    }
 }
 .main {
   padding: 2rem 4rem;

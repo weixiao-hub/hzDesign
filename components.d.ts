@@ -12,5 +12,6 @@ declare module 'vue' {
     HzDropdown: typeof import('./src/components/dropdown/hzDropdown.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
+    SideBar: typeof import('./src/components/sidebar/sideBar.vue')['default']
   }
 }

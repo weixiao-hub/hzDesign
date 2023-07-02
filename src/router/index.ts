@@ -28,6 +28,29 @@ const routes: Array<RouteRecordRaw> = [
         component: () => import('../views/Dropdown.vue')
       }
     ]
+  },
+  {
+    path: '/note',
+    // name: 'notebook',
+    component: () => import('@/views/noteBook.vue'),
+    redirect: '/note/gsap',
+    children: [
+      {
+        path: 'gsap',
+        component: () => import('@/views/notes/gsap.vue')
+      }
+    ]
+  },
+  {
+    path: '/cases',
+    redirect: '/cases/gsap',
+    component: () => import('@/views/case.vue'),
+    children: [
+      {
+        path: 'gsap',
+        component: () => import('@/views/cases/gsap.vue')
+      }
+    ]
   }
 ]
 

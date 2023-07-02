@@ -10,9 +10,7 @@ module.exports = {
     'space-before-function-paren': 0,
     'no-multiple-function-paren': 0,
     '@typescript-eslint/no-explicit-any': ['off'],
-    "vue/multi-word-component-names": ["error", {
-      "ignores": []
-    }],
+    "vue/multi-word-component-names": "off"
   },
   "parser": "@typescript-eslint/parser",
   "parser": "vue-eslint-parser",
