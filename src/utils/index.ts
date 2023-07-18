@@ -1,14 +1,28 @@
-export function copyCode(value: string, callback?: Function): void {
-  navigator.clipboard.writeText(value).then(
-    (res) => {
-      callback && callback()
-      popup('复制成功')
-    },
-    (err) => {
-      console.log(err)
-      popup('复制失败')
-    }
-  )
+import { Message } from '@/components/message'
+export function copyCode(value: string): void {
+  if (navigator.clipboard) {
+    navigator.clipboard?.writeText(value).then(
+      (res) => {
+        Message('复制成功')
+      },
+      (err) => {
+        console.log(err)
+        Message('复制失败')
+      }
+    )
+  } else {
+    copyToClipboard(value)
+  }
+}
+
+function copyToClipboard(value: string) {
+  const textarea = document.createElement('textarea')
+  textarea.value = value
+  document.body.appendChild(textarea)
+  textarea.select()
+  document.execCommand('copy')
+  document.body.removeChild(textarea)
+  Message({ message: '复制成功', type: 'success', center: true })
 }
 
 export function popup(value: string): Function {

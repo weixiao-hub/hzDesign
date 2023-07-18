@@ -12,7 +12,7 @@
       theme="outline"
       size="14"
       class="icon"
-      @click="showMessage"
+      @click="CopyCode"
     />
   </div>
   <pre v-if="show">
@@ -27,8 +27,7 @@
 
 <script lang="ts" setup>
 import { ref,Ref } from 'vue';
-// import {copyCode,popup} from '@/utils'
-import {Message} from '@/components/message'
+import {copyCode,popup} from '@/utils'
   let show:Ref<boolean> = ref(false)
   const props = defineProps({
     fontColor:{
@@ -41,8 +40,8 @@ import {Message} from '@/components/message'
     }
   })
 
-  function showMessage() {
-    Message({message:'复制成功',type:'success',center:true,onlyOne:true,icon:true})
+  function CopyCode() {
+    copyCode(props.value)
   }
 
 
