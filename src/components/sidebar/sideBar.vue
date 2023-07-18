@@ -1,6 +1,6 @@
 <script setup lang='ts'>
 import { PropType } from 'vue';
-import {menu} from './index'
+import type {menu} from './index'
  const Props =  defineProps({
     data:{
       type:Array as unknown as PropType<[menu]>,

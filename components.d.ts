@@ -10,6 +10,7 @@ declare module 'vue' {
     HzButton: typeof import('./src/components/hzbutton/hzButton.vue')['default']
     HzCode: typeof import('./src/components/code/hzCode.vue')['default']
     HzDropdown: typeof import('./src/components/dropdown/hzDropdown.vue')['default']
+    Message: typeof import('./src/components/message/src/message.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
     SideBar: typeof import('./src/components/sidebar/sideBar.vue')['default']
