@@ -5,12 +5,12 @@ import { createVNode, render, RendererNode } from 'vue'
 let id = 0
 export const offsetMap = new Map()
 const instance: RendererNode = []
-const Message = (options: IMessageParams) => {
+export const Message = (options: IMessageParams) => {
   const gap = 20
   const offsetTop = 20
   if (typeof options === 'string') {
     options = {
-      message: options,
+      message: options
     }
   } else {
   }
@@ -28,7 +28,7 @@ const Message = (options: IMessageParams) => {
     offset,
     onClose: () => {
       userClose?.()
-    },
+    }
   }
 
   //挂载元素
@@ -41,7 +41,10 @@ const Message = (options: IMessageParams) => {
     if (index > -1) {
       for (let i = index + 1; i < instance.length; i++) {
         instance[i].el!.style.top =
-          parseInt(instance[i].el!.style.top) - offsetMap.get(index).height - gap + 'px'
+          parseInt(instance[i].el!.style.top) -
+          offsetMap.get(index).height -
+          gap +
+          'px'
       }
     }
     instance.splice(index, 1)

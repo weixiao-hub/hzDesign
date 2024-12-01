@@ -60,14 +60,14 @@ const props = defineProps({
   },
   icon:{
     type:Boolean,
-    deafult:false
+    default:false
   }
 
 })
 
 
 const leave = ref(false)
-let timer
+let timer:number;
 function startTimer() {
   if(props.icon) return;
   timer = setTimeout(() => {
@@ -86,7 +86,7 @@ function close() {
    (myElement.value! as HTMLElement).classList.add('fadeOut')
   });
  emits('destory');
- 
+
 }
 onUnmounted(() => {
   clearTimeout(timer)

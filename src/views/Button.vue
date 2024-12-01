@@ -1,5 +1,12 @@
 <script setup lang='ts'>
 import { defineComponent } from 'vue'
+import {onBeforeRouteUpdate,onBeforeRouteLeave} from 'vue-router'
+onBeforeRouteLeave(() =>{
+  console.log('按钮组件：onBeforeRouteLeave');
+})
+onBeforeRouteUpdate(() =>{
+  console.log('按钮组件：onBeforeRouteUpdate');
+})
 defineComponent({
   name: 'HzButton'
 })

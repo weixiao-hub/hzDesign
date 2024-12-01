@@ -27,7 +27,8 @@
 
 <script lang="ts" setup>
 import { ref,Ref } from 'vue';
-import {copyCode,popup} from '@/utils'
+// import {copyCode,popup} from '@/utils'
+import {Message} from '@/components/message'
   let show:Ref<boolean> = ref(false)
   const props = defineProps({
     fontColor:{
@@ -41,7 +42,8 @@ import {copyCode,popup} from '@/utils'
   })
 
   function CopyCode() {
-    copyCode(props.value)
+    // copyCode(props.value)
+  Message({message:'复制成功',type:'success',showClose:true})
   }
 
 
@@ -55,7 +57,7 @@ import {copyCode,popup} from '@/utils'
     column-gap: 0.5rem;
     .icon {
       display: flex;
-      justify-content: center;      
+      justify-content: center;
       align-items: center;
       padding: 0.2rem;
       cursor: pointer;
@@ -70,7 +72,7 @@ import {copyCode,popup} from '@/utils'
       background-color: #232425;
       color:red
     }
-    
+
   }
   .hz-code {
     white-space: pre-wrap;

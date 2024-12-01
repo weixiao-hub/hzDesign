@@ -3,13 +3,16 @@ import { onMounted } from 'vue';
 import {gsap} from 'gsap'
 import {ScrollTrigger} from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger)
+
 onMounted(()=>{
+  console.log('ok');
+  
   ScrollTrigger.create({
     trigger:'.section2',
     start:'top top',
     end:'+=800',
     scrub:true,
-    markers:true,
+    // markers:true,
     pin:true,
     animation:gsap.timeline().to('.img-box .item1',{left:'10%',scale:0.8}).to('.img-box .item2',{left:'30%',scale:0.9},'<').to('.img-box .item4',{left:'70%',scale:0.9},'<').to('.img-box .item5',{left:'90%',scale:0.8},'<')
   })

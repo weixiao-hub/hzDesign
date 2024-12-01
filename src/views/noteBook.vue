@@ -1,8 +1,15 @@
 <script setup lang='ts'>
 const barData = [
   {title:'动画',menu:[
-    {title:"滚动页面动画",path:''}
-  ]}
+    {title:"滚动页面动画",path:'/note/gsap'}
+  ]},
+  {
+    title: 'JavaScript',menu:[
+  {
+    title: "内存管理",path: '/note/memory'
+  }
+]
+  }
 ]
 </script>
 <template>
@@ -16,7 +23,7 @@ const barData = [
   </div>
 </template>
 <style scoped lang="less">
-  
+
   .note {
     display: flex;
     .sidebar-box {

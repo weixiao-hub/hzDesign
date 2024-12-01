@@ -26,11 +26,16 @@ const routes: Array<RouteRecordRaw> = [
       {
         path: 'dropdown',
         component: () => import('../views/Dropdown.vue')
+      },
+      {
+        path: 'input',
+        component: () => import('../views/Input.vue')
       }
     ]
   },
   {
     path: '/note',
+    name: 'note',
     // name: 'notebook',
     component: () => import('@/views/noteBook.vue'),
     redirect: '/note/gsap',
@@ -38,6 +43,10 @@ const routes: Array<RouteRecordRaw> = [
       {
         path: 'gsap',
         component: () => import('@/views/notes/gsap.vue')
+      },
+      {
+        path: 'memory',
+        component: () => import('@/views/javascript/memory.vue')
       }
     ]
   },
@@ -57,6 +66,15 @@ const routes: Array<RouteRecordRaw> = [
 const router = createRouter({
   history: createWebHashHistory(),
   routes
+})
+router.beforeEach(() => {
+  console.log('全局前置守卫')
+})
+router.afterEach(() => {
+  console.log('全局后置守卫')
+})
+router.beforeResolve(() => {
+  console.log('全局解析守卫')
 })
 namespace Test1 {
   export namespace Test2 {

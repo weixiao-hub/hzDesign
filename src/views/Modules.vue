@@ -1,6 +1,13 @@
 <script setup lang='ts'>
 import { defineComponent } from 'vue'
 import {menu} from '@/components/sidebar/index'
+import {onBeforeRouteUpdate,onBeforeRouteLeave} from 'vue-router'
+onBeforeRouteLeave(() =>{
+  console.log('模块组件：onBeforeRouteLeave');
+})
+onBeforeRouteUpdate(() =>{
+  console.log('模块组件：onBeforeRouteUpdate');
+})
 const barData:menu[] = [
   {
     title: '通用',
@@ -17,6 +24,15 @@ const barData:menu[] = [
       {
         title: 'Dropdown',
         path: '/modules/dropdown'
+      }
+    ]
+  },
+  {
+    title: '表单',
+    menu: [
+      {
+        title: 'Input',
+        path: '/modules/input'
       }
     ]
   },
